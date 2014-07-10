@@ -30,20 +30,30 @@
                                 
                                 <div class="row">
 					<!-- logo -->
-					<div class="logo col-md-3">
+					<div class="logo col-md-3 col-xs-8">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
 						</a>
 					</div>
 					<!-- /logo -->
-
+                                        
+                                        <!--Inicio Nav -->
+                                        <div class="navbar-header col-xs-2 col-xs-offset-2">
+                                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                          </button>
+                                        </div>
 					<!-- nav -->
-					<nav class="nav col-md-9" role="navigation">
+					<nav class="nav  navbar-collapse collapse" role="navigation">
 						<?php html5blank_nav(); ?>
 					</nav>
 					<!-- /nav -->
                                         
+                                        <!-- Fin Nav -->
                                 </div> 
                             </div>
 

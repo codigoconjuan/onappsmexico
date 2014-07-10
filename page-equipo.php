@@ -19,23 +19,46 @@ get_header(); ?>
                 </section>
                 
                 <div id="integrantes" class="row">
+                    
+                    <?php
+                        $args = array(
+                            'post_type' => 'equipo',
+                            'posts_per_page' => 4,
+                            'order' => 'ASC',
+                            'order_by' => 'date'
+                        );
+                    ?>
+                    
+                    <?php $equipo = new WP_Query($args); while ($equipo->have_posts() ): $equipo->the_post(); ?>
                             
                     <div class="col-md-3">
                         <div class="integrante grisBG text-center">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/img/user.svg">
-                            <h3>Nombre 1</h3>
                             
-                            <p class="puesto">CEO</p>
+                            <?php if (has_post_thumbnail()) {
+                                 the_post_thumbnail();
+                            } else {
+                                    echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/user.svg" />';
+                            }  ?>
                             
-                            <p>In posuere ligula at est suscipit blandit. Vivamus lacinia risus nec commodo blandit. Nunc vestibulum metus risus, eu fermentum nisi dapibus non. Praesent vitae tempor odio. Etiam consectetur lacus ante, at pharetra ante venenatis vitae.</p>
+                            <h3><?php the_title(); ?></h3>
+                            
+                            <p class="puesto"><?php the_field('puesto'); ?></p>
+                            
+                            <?php the_content(); ?>
                         
                             <div class="sociales">
-                                algo
+                                <ul class="enlaces">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-github"></i></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    
+                       
+                   <?php endwhile; wp_reset_postdata(); ?>
                     
                 </div>
                 

@@ -14,7 +14,47 @@
                             nav.removeClass("scroll");
                         }
                     });
+                    
+                    $('form').addClass('form-horizontal');
+                    
+                    $('ul#socialNav>li>a').text('');
+                    
+                    $(window).scroll(function(){
+                        if($('section#servicios').isOnScreen()) {
+                            $('section#servicios img').each(function(index) {
+                                 $(this).delay(400*index).fadeIn('slow');
+                            })
+                            console.log("cierto");
+                        } else {
+                            
+                            console.log("falso");
+                        }
+                    });
+
 		
 	});
-	
+
+
+        $.fn.isOnScreen = function(){
+
+            var win = $(window);
+
+            var viewport = {
+                top : win.scrollTop(),
+                left : win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+
+            return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom -100 < bounds.top || viewport.top > bounds.bottom));
+
+        };
+
+
 })(jQuery, this);
+
+

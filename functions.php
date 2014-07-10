@@ -27,10 +27,8 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('equipo', 200, 200, true); // Large Thumbnail
+
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -68,21 +66,13 @@ function html5blank_nav()
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'header-menu',
-		'menu'            => '',
 		'container'       => 'div',
 		'container_class' => 'menu-{menu slug}-container',
-		'container_id'    => '',
 		'menu_class'      => 'menu',
-		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
 		'items_wrap'      => '<ul id="nav" class="nav navbar-nav navbar-right">%3$s</ul>',
-		'depth'           => 0,
-		'walker'          => ''
+		'depth'           => 0
 		)
 	);
 }
@@ -92,21 +82,29 @@ function footer_nav()
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'header-menu',
-		'menu'            => '',
 		'container'       => 'div',
 		'container_class' => 'menu-{menu slug}-container',
-		'container_id'    => '',
 		'menu_class'      => 'menu',
-		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
 		'items_wrap'      => '<ul id="navFooter" class="nav navbar-nav">%3$s</ul>',
-		'depth'           => 0,
-		'walker'          => ''
+		'depth'           => 0
+		)
+	);
+}
+
+function social_menu()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'social-menu',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'menu_class'      => 'menu',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'items_wrap'      => '<ul id="socialNav" class="nav nav-justified">%3$s</ul>',
+		'depth'           => 0
 		)
 	);
 }

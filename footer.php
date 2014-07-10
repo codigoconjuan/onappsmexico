@@ -3,11 +3,11 @@
                                 
                             <div class="container">
                                 <div class="footerNav row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-9">
                                          <?php footer_nav(); ?>
                                     </div>
-                                    <div class="col-md-6 text-right">
-                                        sociales
+                                    <div class="col-md-3 text-right">
+                                        <?php social_menu(); ?>
                                     </div>
                                 </div>
                                 

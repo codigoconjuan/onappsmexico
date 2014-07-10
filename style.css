@@ -151,6 +151,28 @@ ul#navFooter>li>a:hover{
     margin-bottom:20px;
     color:white;
 }
+ul#socialNav>li>a,
+ul#socialNav>li>a:hover {
+    font-size: 2em;
+     font-family: FontAwesome;
+     color:white;
+     background-color: transparent;
+}
+ul#socialNav>li>a[href*="twitter.com"]::before {
+    content: '\f099';
+}
+ul#socialNav>li>a[href*="facebook.com"]::before {
+    content: '\f09a';
+}
+ul#socialNav>li>a[href*="github.com"]::before {
+    content: '\f09b';
+}
+ul#socialNav>li>a[href*="pinterest.com"]::before {
+    content: '\f0d2';
+}
+ul#socialNav>li>a[href*="linkedin.com"]::before {
+    content: '\f0e1';
+}
 /*** COLORES **/
 
 .blancoBG {
@@ -229,7 +251,9 @@ section#aplicaciones {
 section#servicios {
     padding: 20px;
 }
-
+section#servicios img {
+    display: none;
+}
 section#contacto {
     padding: 40px 0;
 }
@@ -285,29 +309,71 @@ div.integrante p {
     margin: 20px;
 }
 div.integrante .sociales {
-    padding: 20px;
+    padding: 20px 0;
     border-top: 1px solid white;
 }
+
+ul.enlaces {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+ul.enlaces li {
+    display:inline-block;
+    margin-right: 15px;
+}
+ul.enlaces li i.fa {
+    font-size:1.6em;
+}
+
+ul.enlaces li i.fa-facebook {
+    color:#3b579d;
+}
+ul.enlaces li i.fa-twitter {
+    color:#33ccff;
+}
+ul.enlaces li i.fa-linkedin {
+    color:#01649b;
+}
+ul.enlaces li i.fa-pinterest {
+    color:#cb2027;
+}
+
+ul.enlaces li i.fa-github {
+    color:black;
+}
+
+/** CONTACTO **/
+
+.wpcf7 input[type="submit"] {
+    background-color: #323538;
+    padding: 5px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border:none;
+    color:white;
+    border-radius:5px;
+}
+
+span.wpcf7-form-control-wrap {
+    display: block!important;
+}
+
 /*------------------------------------*\
-    IMAGES
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-	TYPOGRAPHY
+   FONTS
 \*------------------------------------*/
 
 @font-face {
-	font-family:'Font-Name';
-	src:url('fonts/font-name.eot');
-	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font-name.woff') format('woff'),
-		url('fonts/font-name.ttf') format('truetype'),
-		url('fonts/font-name.svg#font-name') format('svg');
+	font-family:'FontAwesome';
+	src:url('fonts/fontawesome-webfont.eot');
+	src:url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/fontawesome-webfont.woff') format('woff'),
+		url('fonts/fontawesome-webfont.ttf') format('truetype'),
+		url('fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
     font-weight:normal;
     font-style:normal;
 }
+
 
 /*------------------------------------*\
     RESPONSIVE
@@ -428,58 +494,4 @@ a img.aligncenter {
 }
 .bypostauthor {
 
-}
-
-/*------------------------------------*\
-    PRINT
-\*------------------------------------*/
-
-@media print {
-	* {
-		background:transparent !important;
-		color:#000 !important;
-		box-shadow:none !important;
-		text-shadow:none !important;
-	}
-	a,
-	a:visited {
-		text-decoration:underline;
-	}
-	a[href]:after {
-		content:" (" attr(href) ")";
-	}
-	abbr[title]:after {
-		content:" (" attr(title) ")";
-	}
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content:"";
-	}
-	pre,blockquote {
-		border:1px solid #999;
-		page-break-inside:avoid;
-	}
-	thead {
-		display:table-header-group;
-	}
-	tr,img {
-		page-break-inside:avoid;
-	}
-	img {
-		max-width:100% !important;
-	}
-	@page {
-		margin:0.5cm;
-	}
-	p,
-	h2,
-	h3 {
-		orphans:3;
-		widows:3;
-	}
-	h2,
-	h3 {
-		page-break-after:avoid;
-	}
 }
