@@ -119,6 +119,15 @@ header.scroll {
 
 }
 /* nav */
+ul#nav>li {
+    border-bottom:0px solid white;
+    transition: .15s all ease-in-out;
+    overflow:hidden;
+    height:55px;
+}
+ul#nav>li:hover {
+    border-bottom: 5px solid white;
+}
 ul#nav>li>a {
     color:white;
     font-weight: bold;
@@ -253,6 +262,12 @@ section#servicios {
 }
 section#servicios img {
     display: none;
+     -webkit-transition: all .2s ease-in-out;
+     opacity: .9;
+}
+section#servicios img:hover {
+    -webkit-transform: scale(1.2);
+    opacity:1;
 }
 section#contacto {
     padding: 40px 0;
@@ -278,6 +293,11 @@ section#contacto a.btn-default {
 }
 section#contacto a.btn-default:hover {
     background-color: #2d3235;
+}
+
+div.modal-content {
+   margin-top: 20%;
+   padding: 40px;
 }
 
 
@@ -385,8 +405,14 @@ span.wpcf7-form-control-wrap {
 @media only screen and (min-width:480px) {
 
 }
-@media only screen and (min-width:768px) {
-
+@media only screen and (max-width:767px) {
+    .navbar  {
+        padding-top:0;
+    } 
+    header.navbar.navbar-fixed-top {
+        background-color:#4f5962;
+    }
+    
 }
 @media only screen and (min-width:1024px) {
 

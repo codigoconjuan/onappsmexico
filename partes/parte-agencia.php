@@ -4,9 +4,9 @@
             
             <div class="container contenido text-center">
         
-                <h2>Somos una agencia de programación de aplicaciones móviles en México</h2>
+                <h2><?php the_field('titulo'); ?></h2>
 
-                <p>Somos especialistas y contamos con 12 años de experiencia</p>
+                <p><?php the_field('descripcion'); ?></p>
                 
             </div>
         

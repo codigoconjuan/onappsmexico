@@ -3,7 +3,7 @@
                                 
                             <div class="container">
                                 <div class="footerNav row">
-                                    <div class="col-md-9">
+                                    <div class="col-md-9 hidden-sm hidden-xs">
                                          <?php footer_nav(); ?>
                                     </div>
                                     <div class="col-md-3 text-right">

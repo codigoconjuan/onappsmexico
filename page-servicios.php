@@ -25,10 +25,14 @@ get_header(); ?>
                 
             </section>
 
-	<?php endwhile; endif; ?>
+	
                 
     <?php get_template_part('partes/parte','servicios'); ?>      
 
     <?php get_template_part('partes/parte','contacto'); ?>
+
+
+
+    <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

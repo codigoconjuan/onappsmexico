@@ -48,11 +48,33 @@ get_header(); ?>
                         
                             <div class="sociales">
                                 <ul class="enlaces">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-github"></i></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                       
+                                    <?php $facebook = get_field('facebook'); ?>
+                                    <?php if ($facebook != '')  { ?>
+                                         <li><a href="<?php the_field('facebook'); ?>"><i class="fa fa-facebook"></i></a></li>
+                                    <?php } ?>
+       
+                                    <?php $twitter = get_field('twitter'); ?>
+                                    <?php if ($twitter != '')  { ?>
+                                         <li><a href="<?php the_field('twitter'); ?>"><i class="fa fa-twitter"></i></a></li>
+                                    <?php } ?>
+                                    
+                                    <?php $pinterest = get_field('pinterest'); ?>
+                                    <?php if ($pinterest != '')  { ?>
+                                         <li><a href="<?php the_field('pinterest'); ?>"><i class="fa fa-pinterest"></i></a></li>
+                                    <?php } ?>
+
+                                     <?php $github = get_field('github'); ?>
+                                    <?php if ($github != '')  { ?>
+                                         <li><a href="<?php the_field('github'); ?>"><i class="fa fa-github"></i></i></a></li>
+                                    <?php } ?>
+
+                                     <?php $linkedin = get_field('linkedin'); ?>
+                                    <?php if ($linkedin != '')  { ?>
+                                         <li><a href="<?php the_field('linkedin'); ?>"><i class="fa fa-linkedin"></i></a></li>
+                                    <?php } ?>         
+                                         
+                                         
                                 </ul>
                             </div>
                         </div>

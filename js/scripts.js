@@ -24,10 +24,8 @@
                             $('section#servicios img').each(function(index) {
                                  $(this).delay(400*index).fadeIn('slow');
                             })
-                            console.log("cierto");
                         } else {
-                            
-                            console.log("falso");
+
                         }
                     });
 
