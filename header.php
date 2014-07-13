@@ -30,7 +30,7 @@
                                 
                                 <div class="row">
 					<!-- logo -->
-					<div class="logo col-md-3 col-xs-8">
+					<div class="logo col-md-3 col-sm-4 col-xs-8 ">
 						<a href="<?php echo home_url(); ?>">
 							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
@@ -39,7 +39,7 @@
 					<!-- /logo -->
                                         
                                         <!--Inicio Nav -->
-                                        <div class="navbar-header col-xs-2 col-xs-offset-2">
+                                        <div class="navbar-header  col-xs-2 col-xs-offset-2">
                                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                                             <span class="sr-only">Toggle navigation</span>
                                             <span class="icon-bar"></span>
